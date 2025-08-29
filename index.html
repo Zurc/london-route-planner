@@ -277,6 +277,8 @@
           const tflResponse = await fetch(tflUrl, {
             method: "GET",
             headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Headers": "Content-Type",
               "Cache-Control": "no-cache",
               Accept: "application/json",
             },
