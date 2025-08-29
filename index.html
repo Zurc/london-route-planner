@@ -164,9 +164,8 @@
     <script>
       // --- IMPORTANT ---
       // Get your free TfL API credentials here: https://api-portal.tfl.gov.uk/
-      const TFL_APP_ID = process.env.TFL_APP_ID || "${{ secrets.TFL_APP_ID }}";
-      const TFL_APP_KEY =
-        process.env.TFL_APP_KEY || "${{ secrets.TFL_APP_KEY }}";
+      const TFL_APP_ID = "${{ secrets.TFL_APP_ID }}";
+      const TFL_APP_KEY = "${{ secrets.TFL_APP_KEY }}";
       // --- ----------- ---
 
       let map;

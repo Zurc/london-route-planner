@@ -18,8 +18,8 @@ jobs:
           TFL_APP_ID: ${{ secrets.TFL_APP_ID }}
           TFL_APP_KEY: ${{ secrets.TFL_APP_KEY }}
         run: |
-          sed -i "s/YOUR_TFL_APP_ID/${TFL_APP_ID}/g" index.html
-          sed -i "s/YOUR_TFL_APP_KEY/${TFL_APP_KEY}/g" index.html
+          sed -i "s|\${{ secrets.TFL_APP_ID }}|${TFL_APP_ID}|g" index.html
+          sed -i "s|\${{ secrets.TFL_APP_KEY }}|${TFL_APP_KEY}|g" index.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
