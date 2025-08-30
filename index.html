@@ -185,6 +185,7 @@
           "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
           {
             maxZoom: 19,
+            crossorigin: "",
             attribution:
               '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
           }
@@ -277,12 +278,10 @@
           const tflResponse = await fetch(tflUrl, {
             method: "GET",
             headers: {
-              "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Headers": "Content-Type",
               "Cache-Control": "no-cache",
               Accept: "application/json",
             },
-            credentials: "omit",
+            credentials: "include",
           });
           const tflData = await tflResponse.json();
 
@@ -313,6 +312,7 @@
             "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
             {
               maxZoom: 19,
+              crossorigin: "",
               attribution:
                 '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
             }
